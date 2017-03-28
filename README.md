@@ -5,7 +5,7 @@ But it seems like DownloadManager just downloads the file but there is no such m
 
 So, I started implementing download functionality(using URL, HttpURLConnection etc..) of my own(inside DownloadItemsAdapter.java) on a separate background thread.
 I was planning to move the same code to onHandleIntent() inside an IntentService so that the downloading will still work even when app is closed.
-But, I got stuck in between:
+But, I got stuck in between while implementing the download functionality:
 
 - //getting exception here: java.io.FileNotFoundException: /data/user/0/com.shikhar.eroslab/cache/http: open failed: EISDIR (Is a directory)
    <b> RandomAccessFile output = new RandomAccessFile(outputFileCache, "rw"); </b>
